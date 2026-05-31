@@ -14,8 +14,8 @@ class DetalheActivity : AppCompatActivity() {
         setContentView(R.layout.activity_detalhes)
 
         val nome = intent.getStringExtra("NOME")
-        val desc = intent.getStringExtra("DESC")
-        val imgRes = intent.getIntExtra("IMG", 0)
+        val desc = intent.getStringExtra("DESCRICAO")
+        val imgRes = intent.getIntExtra("IMAGEM", 0)
 
         val pontosTuristicos =
             listOf("Ponto de Interesse 1", "Ponto de Interesse 2", "Ponto de Interesse 3")
@@ -25,7 +25,7 @@ class DetalheActivity : AppCompatActivity() {
         findViewById<ImageView>(R.id.imgDetalhe).setImageResource(imgRes)
 
         val rv = findViewById<RecyclerView>(R.id.rvPontosTuristicos)
-        rv.layoutManager = LinearLayoutManager(this) // Define o Arquiteto [3]
-        rv.adapter = PontoTuristicoAdapter(pontosTuristicos) // Define a Ponte [3]
+        rv.layoutManager = LinearLayoutManager(this)
+        rv.adapter = PontoTuristicoAdapter(pontosTuristicos)
     }
 }

@@ -15,6 +15,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val rv = findViewById<RecyclerView>(R.id.recyclerView)
+        rv.layoutManager = androidx.recyclerview.widget.LinearLayoutManager(this)
 
         val listaDestinos = listOf(
             DestinoModel("Paris", "Cidade Luz", "Descrição detalhada de Paris...", R.drawable.paris),
